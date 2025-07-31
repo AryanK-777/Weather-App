@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./App.css"
 
 const API_KEY ='e8239b1b90bea6d4c011fb1f800d96ce';
 
@@ -7,7 +8,7 @@ function Weather() {
   const [weather, setWeather] = useState(null);
   const [city, setCity]       = useState('London');
   const [input, setInput]     = useState('London');
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [error, setError]     = useState(null);
   useEffect(() => { 
   const fetchWeather = async () => {
@@ -51,7 +52,7 @@ function Weather() {
         />
         <button type="submit">Go</button>
 
-        {loading && <p>Loading…</p>}
+        {/* {loading && <p>Loading…</p>} */}
         {error   && <p style={{ color: 'red' }}>{error}</p>}
 
         {weather && !error && (
